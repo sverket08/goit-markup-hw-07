@@ -41,9 +41,10 @@
     transition-duration:$transition-time;
     transition-timing-function: $cubic;
 
+    &:hover,
+    &:focus {
+            background-color: $btn-color;
+        }
+
 }
 
-&:hover,
-&:focus {
-    background-color: $btn-color;
-}

@@ -71,13 +71,15 @@
     transition-property: background-color, color;
     transition-duration: $transition-time;
     transition-timing-function: $cubic;
+
+    &:hover,
+        &:focus {
+            background-color: $accent-color;
+            color: $body-color;
+        }
 }
 
-&:hover,
-&:focus {
-    background-color: $accent-color;
-    color: $body-color;
-}
+
 
 .card__icon {
     display: flex;

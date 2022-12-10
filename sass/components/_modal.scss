@@ -51,10 +51,11 @@
     cursor: pointer;
     transition: fill $transition-time $cubic,
         border-color $transition-time $cubic;
+
+        &:hover,
+         &:focus {
+                fill: $accent-color;
+                border-color: $accent-color;
+            }
 }
 
-&:hover,
-&:focus {
-    fill: $accent-color;
-    border-color: $accent-color;
-}
