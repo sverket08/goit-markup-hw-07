@@ -1,0 +1,55 @@
+.client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background: $top-color;
+}
+
+.client__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-color;
+    margin-bottom: 50px;
+}
+
+.client__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.client__item {
+    display: block;
+    width: 170px;
+    height: 92px;
+    background-color: $top-color;
+    border: 1px solid $icon;
+    border-radius: 4px;
+}
+
+.client__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $icon;
+    color: $icon;
+    transition-property: color, border-color;
+    transition-duration: $transition-time;
+    transition-timing-function: $cubic;
+}
+
+&:hover,
+&:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+}
+
+.client__icon {
+    display: flex;
+    height: auto;
+    fill: currentColor;
+}

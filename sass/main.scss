@@ -1,0 +1,24 @@
+// utils
+@import"./utils/variables";
+@import"./utils/visually-hidden";
+
+// base
+@import"./base/base";
+@import"./base/logo";
+
+// body
+@import"./components/header";
+@import"./components/hero";
+@import"./components/benefit";
+@import"./components/work";
+@import"./components/team";
+@import"./components/client";
+@import"./components/footer";
+
+// portfolio
+@import"./components/filterbtn";
+@import"./components/portfolio";
+
+// modal
+@import"./components/modal";
+@import"./components/form";

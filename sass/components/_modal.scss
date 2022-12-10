@@ -1,0 +1,60 @@
+.modal__backdrop {
+    position: fixed;
+    left: 0p;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 500ms, visibility 500ms;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal__backdrop .is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.1);
+}
+
+.modal {
+    position: absolute;
+    padding: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    height: 581px;
+    transition: transform 1000ms;
+    background: $body-color;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal__button--close {
+    font-family: inherit;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background: $body-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: fill $transition-time $cubic,
+        border-color $transition-time $cubic;
+}
+
+&:hover,
+&:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+}

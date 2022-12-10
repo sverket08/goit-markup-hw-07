@@ -1,0 +1,144 @@
+.form {
+    // color: var(--title-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__title {
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $title-color;
+}
+
+.form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+&:focus-within .form__label {
+    color: $accent-color;
+}
+&:focus-within .form__input {
+    border-color: $accent-color;
+}
+
+&:focus-within .form__icon {
+    fill: $accent-color;
+}
+
+.form__label {
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: $text-color;
+}
+
+.form__input {
+    width: 448px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+}
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-25%);
+    display: inline-block;
+}
+
+.form__required {
+    margin: 0 0 10px 0;
+    padding: 0 42px;
+    height: 40px;
+}
+
+.form__comment {
+    margin: 0 0 20px 0;
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+}
+
+&::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+/*  checkbox */
+
+.form__polity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $text-color;
+}
+
+.form__icon--check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+    margin: 0 7px 0 0;
+
+    fill: $body-color;
+    border: 2px solid $main-color;
+    border-radius: 2px;
+}
+
+.form__checkbox:checked+.form__icon--check {
+    background-color: $accent-color;
+    border: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/icon-check.svg);
+    transition: transform $transition-time $cubic;
+}
+
+.form__checkbox:hover+.form__icon--check,
+.form__checkbox:focus+.form__icon--check {
+    transform: scale(1.1);
+}
+
+.form__link {
+    color: $accent-color;
+}
+
+.form__btn--send {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $body-color;
+    background: $accent-color;
+
+    transition: transform $transition-time $cubic;
+}
+
+
+&:hover,
+&:focus {
+    transform: scale(1.1);
+    background: $btn-color;
+}
